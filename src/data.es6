@@ -11,11 +11,10 @@ class DataManager{
     };
     this.xmlHttp.open( "GET", this.url + this.token, false ); // false for synchronous request
     this.xmlHttp.send();
-    console.log(this.xmlHttp);
   }
 }
 
-module.export = DataManager;
+module.exports = DataManager;
 
 
 
