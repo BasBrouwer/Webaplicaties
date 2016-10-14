@@ -42,7 +42,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
     gulp.watch('./src/**/*.*', ['run']);
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch(['./css/**/**.css', './dist/**/*.js', './*.html', './php/*.php']).on('change', browserSync.reload);
+    gulp.watch(['./css/**/**.css', './dist/**/*.js', './*.html']).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch', 'run', 'sass', 'browser-sync']);
