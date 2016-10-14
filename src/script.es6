@@ -42,16 +42,17 @@ function parseData(data){
 }
 
 function marker() {
-  for(var i = 0; i < 500; i++){
+  let markers = [];
+  for(var i = 0; i < 4000; i++){
     let pos = {lat: Number(objectArray[i].lat), lng: Number(objectArray[i].long)};
-    let marker = new google.maps.Marker({
+    var marker = new google.maps.Marker({
       position: pos,
       map: map,
     });
+    markers.push(marker);
   }
 
-  var markerCluster = new MarkerClusterer(map, markers,
-    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+  var markerCluster = new MarkerClusterer(map, markers, {imagePath: './images/m'});
 }
 
 window.onload = () => {
