@@ -85,7 +85,7 @@ function infoWindow() {
   for (var i = 0; i < markers.length; i++) {
     var marker = markers[i];
     google.maps.event.addListener(marker, 'click', function () {
-// where I have added .html to the marker object.
+      // info van de ma
       infowindow.setContent(
         "<h3>" + this.name + "</h3>" + "<ul class='info'>" +
           "<li><span>Fell:</span> " + this.fall + "</li>" +
@@ -101,6 +101,7 @@ function infoWindow() {
 // =============================================================================
 function searchBox() {
   var input = document.getElementById('pac-input');
+  console.log(input.value);
   var searchBox = new google.maps.places.SearchBox(input);
   if (starting){
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
