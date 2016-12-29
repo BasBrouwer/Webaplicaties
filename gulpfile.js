@@ -18,9 +18,8 @@ gulp.task('run', function() {
       .pipe(source('script.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(uglify())
       .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('./public/assets/js'));
 });
 
 gulp.task('sass', function () {
@@ -28,13 +27,13 @@ gulp.task('sass', function () {
       .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(sourcemaps.write('./maps'))
-      .pipe(gulp.dest('./css'));
+      .pipe(gulp.dest('./public/assets/css'));
 });
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./public/"
         }
     });
 });
@@ -42,7 +41,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
     gulp.watch('./src/**/*.*', ['run']);
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch(['./css/**/**.css', './dist/**/*.js', './*.html']).on('change', browserSync.reload);
+    gulp.watch(['./public/assets/css/**/**.css', './public/assets/js/**/*.js', './public/*.html']).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch', 'run', 'sass', 'browser-sync']);

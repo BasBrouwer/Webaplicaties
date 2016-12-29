@@ -1,0 +1,17 @@
+$hFont: 'Raleway',  sans-serif;
+$parFont: 'Roboto',  sans-serif;
+
+$color-navyblue: #18121e;
+$color-gunmetal: #233237;
+$color-rustyred: #984b43;
+$color-yellow: #eac67a;
+$color-grey: #e3e3e3;
+
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

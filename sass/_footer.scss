@@ -1,0 +1,63 @@
+.footer{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background-color: $color-gunmetal;
+  bottom: 0;
+  color: white;
+  @include transition(opacity .25s ease-in-out);
+
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  section{
+    //width: 350px;
+    height: 40px;
+    margin-top:15px;
+    display: inline-block;
+      margin-left:50px;
+  }
+}
+
+
+input[type=number], select{
+  padding: 4px 5px;
+  border: none;
+  outline: none;
+  background-color: $color-grey;
+  margin-top:5px;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+select {
+  padding: 4px 10px;
+}
+
+.footer {
+  .title{
+    font-size: 14px;
+  }
+  .small {
+    font-size: 10px;
+  }
+}
+
+#reset, input[type=submit]{
+  padding: 4px 10px;
+  border: none;
+  outline: none;
+  z-index: 2;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: $color-grey;
+  @include transition(all 0.3s ease-in-out);
+
+  &:hover {
+    background-color: $color-rustyred;
+    color: white;
+  }
+}

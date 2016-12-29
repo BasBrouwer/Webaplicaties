@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>index</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/maps.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:900|Roboto" rel="stylesheet">
+</head>
+<body>
+
+<!--<div id="wrapper">-->
+    <!--<div id="home" class="center">-->
+      <!--<img src="assets/images/meteor-left.png" alt="">-->
+      <!--<h1 class="hide"> Welkom bij Meteor finder</h1>-->
+        <!--<p class="hide"> orem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur sapien at lectus porta, eu ultrices nulla volutpat. Quisque et lectus ante. Morbi eget elementum nunc. Nunc vulputate, massa at porta ornare, urna nisl auctor lorem, vel iaculis mauris neque a diam. Curabitur sollicitudin volutpat nulla, vel porttitor risus vehicula non. </p>-->
+      <!--<h3>Start positie</h3>-->
+      <!--<input id="pac-input" class="controls" type="text" placeholder="Search Box">-->
+    <!--</div>-->
+<!--</div>-->
+
+<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+
+<div id="map"></div>
+
+<div class="sidebar">
+
+</div>
+
+
+<div class="footer">
+  <section id="mass">
+    <span class="title">Filter on mass <span class="small">0 t/m 4000000</span></span>
+    <form action="" id="filter_mass" class="mass">
+      <input type="number" name="massK"> -
+      <input type="number" name="massG">
+      <input type="submit" value="Filter">
+    </form>
+  </section>
+
+  <section id="year">
+    <span class="title">Filter on Year <span class="small">1400 t/m 2016</span></span>
+    <form action="" id="filter_year" class="year">
+      <input type="number" name="yearlow"> -
+      <input type="number" name="yearhigh">
+      <input type="submit" value="Filter">
+    </form>
+  </section>
+
+  <section id="found">
+    <span class="title">Filter on Found <span class="small">Found/Fell</span></span>
+    <form action="" id="filter_found" class="year">
+      <select name="found">
+        <option value="Found">Found</option>
+        <option value="Fell">Fell</option>
+      </select>
+      <input type="submit" value="Filter">
+    </form>
+  </section>
+
+  <section>
+    <button id="reset">Reset Filters</button>
+  </section>
+</div>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChE0fEAMNg9LUiqs-1y1w_i7Iba6gFukU&libraries=places"></script>
+<script src="assets/js/markerclusterer.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+
+</body>
+</html>
+
